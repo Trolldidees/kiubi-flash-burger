@@ -1,0 +1,39 @@
+<?php
+/**
+ * Fichier de configuration de l'application
+ * 
+ * api_token				: Clé API Back-office. La génération d'une clé se déroule dans le back-office de votre site Kiubi
+ * little_printer_code		: Code de votre imprimante Little Printer. Ce code est disponible dans votre espace sur Bergcloud.com
+ * little_printer_template	: Nom du template utilisé pour l'impression du ticket Little Printer. Le fichier doit être situé dans libs/LittlePrinter/templates/
+ *							  (par défaut le template 'default' est utilisé)
+ * code_site				: Code site de votre site Kiubi
+ * client_min_ca			: Chiffre d'affaire minimal qu'un client doit réaliser pour obtenir un bon de réduction
+ * code_reduc_percent		: Pourcentage de réduction des bons offerts aux clients ayant atteint le CA demandé
+ * code_reduc_prefix		: Préfixe pour les codes des bons de réductions. Le format du code est "prefix-numéro_client"
+ * sms_gateway				: Code du service sms utilisé. Mettre une valeur vide pour ne pas envoyer de sms
+ * esendex et smspro		: Définition des paramètres nécessaires à chaque service sms, la liste dépend des pré-requis de chaque service
+ */
+
+$cfg = array(
+	
+	'api_token'					=> '',
+	'little_printer_code'		=> '',
+	'little_printer_template'	=> '', 
+	'code_site'					=> '',
+	'client_min_ca'				=> 10,
+	'code_reduc_percent'		=> 5,
+	'code_reduc_prefix'			=> 'MERCI',
+	'sms_gateway'				=> '',
+	
+	'esendex'					=> array(
+									'account'		=> '',
+									'email'			=> '',
+									'password'		=> '',
+								   ),
+	'smspro'					=> array(
+									'login'			=> '',
+									'password'		=> '',
+									'sender'		=> '',
+								   ),
+	
+);
